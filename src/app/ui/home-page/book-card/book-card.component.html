@@ -1,0 +1,13 @@
+<div class="book-card-container">
+  <div class="book-card-image">
+    <img src="{{ bookInfo?.smallThumbnail }}" />
+  </div>
+  <div class="book-card-text">
+    <h5>{{ bookInfo?.title }}</h5>
+    <div *ngFor="let author of bookInfo?.authors" class="book-card-authors">
+      <p>{{ author }}</p>
+    </div>
+    <p>{{ bookInfo?.description }}</p>
+    <p>{{ bookInfo?.averageRating }}</p>
+  </div>
+</div>
