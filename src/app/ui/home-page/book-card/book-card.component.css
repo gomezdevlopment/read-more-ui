@@ -1,0 +1,23 @@
+.book-card-container {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem;
+}
+
+.book-card-image-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.book-card-image {
+  width: 150px;
+  height: 250px;
+}
+.book-card-text {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
