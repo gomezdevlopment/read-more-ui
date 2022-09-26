@@ -16,8 +16,19 @@
   width: 150px;
   height: 250px;
 }
-.book-card-text {
+.book-card-body {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+}
+
+.max-lines {
+  width: calc(50vw);
+  height: auto;
+  max-height: 200px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

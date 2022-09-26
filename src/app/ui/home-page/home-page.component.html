@@ -33,20 +33,20 @@
           >
         </li>
       </ul>
-      <form class="d-flex">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search books"
-          aria-label="Search"
-          [(ngModel)]="input"
-          name="input"
-          (keydown.enter)="searchBooks(input)"
-        />
-      </form>
     </div>
   </div>
 </nav>
+<form>
+  <input
+    class="form-control"
+    type="search"
+    placeholder="Search books"
+    aria-label="Search"
+    [(ngModel)]="input"
+    name="input"
+    (keydown.enter)="searchBooks(input)"
+  />
+</form>
 <div *ngFor="let bookInfo of searchResults" class="search-results">
   <app-book-card [bookInfo]="bookInfo"></app-book-card>
 </div>
