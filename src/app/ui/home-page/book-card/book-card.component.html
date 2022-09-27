@@ -19,9 +19,23 @@
         Want to Read?
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Already read</a></li>
-        <li><a class="dropdown-item" href="#">Currently reading</a></li>
-        <li><a class="dropdown-item" href="#">Want to read</a></li>
+        <li>
+          <a class="dropdown-item" (click)="addBookToUserBooks('already read')"
+            >Already read</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            (click)="addBookToUserBooks('currently reading')"
+            >Currently reading</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" (click)="addBookToUserBooks('want to read')"
+            >Want to read</a
+          >
+        </li>
       </ul>
     </div>
   </div>

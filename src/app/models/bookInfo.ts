@@ -1,4 +1,5 @@
 export interface BookInfo {
+  id: string;
   title: string;
   authors: string[];
   publisher: string;
