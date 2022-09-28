@@ -9,5 +9,5 @@ export interface Book {
   status: string;
   rating: number;
   image: string;
-  userId: number;
+  userID: string;
 }

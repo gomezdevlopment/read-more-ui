@@ -1,0 +1,35 @@
+.my-header {
+  display: flex;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.my-book-card-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: antiquewhite;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+
+.my-book-card-image-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  padding-bottom: 2rem;
+}
+
+.my-book-card-image {
+  height: 200px;
+}
+
+.my-book-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

@@ -12,6 +12,7 @@ export class BookCardComponent implements OnInit {
   @Input() bookInfo?: BookInfo;
   constructor(public service: BookService) {}
   public book?: Book;
+  public testUserId = 'testUserId';
 
   addBookToUserBooks(status: string) {
     if (this.bookInfo != null) {
@@ -26,7 +27,7 @@ export class BookCardComponent implements OnInit {
         status: status,
         rating: 0,
         image: this.bookInfo.smallThumbnail,
-        userId: 0,
+        userID: this.testUserId,
       };
 
       this.service.addBook(this.book).subscribe({

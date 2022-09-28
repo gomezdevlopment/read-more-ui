@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<div class="my-header">
+  <h1>My Books</h1>
+</div>
+
+<div *ngFor="let book of myBooks">
+  <app-my-book-card [book]="book"></app-my-book-card>
+</div>
