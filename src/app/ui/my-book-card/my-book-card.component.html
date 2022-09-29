@@ -1,4 +1,8 @@
-<div class="my-book-card-container">
+<div
+  class="my-book-card-container"
+  [routerLinkActive]="['link-active']"
+  [routerLink]="['details', book?.id]"
+>
   <div class="my-book-card-image-container">
     <img class="my-book-card-image" src="{{ book?.image }}" />
   </div>

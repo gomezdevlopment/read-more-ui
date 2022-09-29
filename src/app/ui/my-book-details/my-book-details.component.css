@@ -1,0 +1,29 @@
+.my-book-details-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: antiquewhite;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+
+.my-book-details-image-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  padding-bottom: 2rem;
+}
+
+.my-book-details-image {
+  height: 200px;
+}
+
+.my-book-details-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

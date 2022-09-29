@@ -17,4 +17,8 @@ export class BookService {
   getBooks(userId: string): Observable<Book[]> {
     return this.client.get<Book[]>(this.baseUrl + 'all/' + userId);
   }
+
+  getBookById(id: number): Observable<Book> {
+    return this.client.get<Book>(this.baseUrl + 'book/' + id);
+  }
 }

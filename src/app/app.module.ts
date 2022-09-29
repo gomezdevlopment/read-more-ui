@@ -10,9 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { MyBooksComponent } from './ui/my-books/my-books.component';
 import { MyBookCardComponent } from './ui/my-book-card/my-book-card.component';
 import { NavbarComponent } from './ui/navbar/navbar.component';
+import { MyBookDetailsComponent } from './ui/my-book-details/my-book-details.component';
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, BookCardComponent, MyBooksComponent, MyBookCardComponent, NavbarComponent],
+  declarations: [AppComponent, HomePageComponent, BookCardComponent, MyBooksComponent, MyBookCardComponent, NavbarComponent, MyBookDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
