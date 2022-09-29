@@ -3,6 +3,23 @@
   <h1>My Books</h1>
 </div>
 
-<div *ngFor="let book of myBooks">
-  <app-my-book-card [book]="book"></app-my-book-card>
+<h2 *ngIf="reading.length > 0">Currently Reading</h2>
+<div class="my-books-container">
+  <ng-container *ngFor="let book of reading">
+    <app-my-book-card [book]="book"></app-my-book-card>
+  </ng-container>
+</div>
+
+<h2 *ngIf="wantToRead.length > 0">Want to Read</h2>
+<div class="my-books-container">
+  <ng-container *ngFor="let book of wantToRead">
+    <app-my-book-card [book]="book"></app-my-book-card>
+  </ng-container>
+</div>
+
+<h2 *ngIf="read.length > 0">Already Read</h2>
+<div class="my-books-container">
+  <ng-container *ngFor="let book of read">
+    <app-my-book-card [book]="book"></app-my-book-card>
+  </ng-container>
 </div>

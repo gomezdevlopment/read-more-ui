@@ -11,12 +11,30 @@ export class MyBooksComponent implements OnInit {
   constructor(public service: BookService) {}
 
   public myBooks: Book[] = [];
+  public reading: Book[] = [];
+  public wantToRead: Book[] = [];
+  public read: Book[] = [];
+
   public testUserId = 'testUserId';
   public getBooks() {
     return this.service.getBooks(this.testUserId).subscribe({
       next: (res) => {
         this.myBooks = res;
         console.log(res);
+
+        this.myBooks.forEach((book) => {
+          switch (book.status) {
+            case 'currently reading':
+              this.reading.push(book);
+              break;
+            case 'want to read':
+              this.wantToRead.push(book);
+              break;
+            case 'already read':
+              this.read.push(book);
+              break;
+          }
+        });
       },
       error: (err) => {
         console.log(err);
