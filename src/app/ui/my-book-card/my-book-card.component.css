@@ -1,16 +1,10 @@
-.my-header {
-  display: flex;
-  margin: 2rem;
-  padding: 2rem;
-}
-
 .my-book-card-container {
-  width: 400px;
+  width: 20rem;
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  background-color: antiquewhite;
-  border-radius: 1rem;
+  background-color: whitesmoke;
+  border-radius: 0.8rem;
   margin: 2rem;
 }
 
@@ -24,7 +18,12 @@
 }
 
 .my-book-card-image {
-  height: 200px;
+  height: 10rem;
+}
+
+.my-book-card-image:hover {
+  cursor: pointer;
+  height: 12rem;
 }
 
 .my-book-card-body {
@@ -32,4 +31,30 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+.remove-book {
+  color: cornflowerblue;
+}
+
+.remove-book:hover {
+  cursor: pointer;
+  color: darkblue;
+}
+
+.max-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: initial;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: #ffb74d;
+  border-color: transparent;
+}
+
+.btn:hover {
+  border-color: transparent;
 }

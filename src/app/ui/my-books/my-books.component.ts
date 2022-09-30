@@ -14,6 +14,15 @@ export class MyBooksComponent implements OnInit {
   public reading: Book[] = [];
   public wantToRead: Book[] = [];
   public read: Book[] = [];
+  public bookToDeleteId?: number;
+
+  refresh() {
+    this.myBooks = [];
+    this.reading = [];
+    this.wantToRead = [];
+    this.read = [];
+    this.getBooks();
+  }
 
   public testUserId = 'testUserId';
   public getBooks() {
@@ -41,7 +50,36 @@ export class MyBooksComponent implements OnInit {
       },
     });
   }
+
   ngOnInit(): void {
     this.getBooks();
   }
+
+  public deleteBook() {
+    if (this.bookToDeleteId != null) {
+      this.service.deleteBook(this.bookToDeleteId).subscribe({
+        next: (res) => {
+          console.log(res);
+          this.refresh();
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+    }
+  }
+
+  public onOpenModal = (mode: String, id: number) => {
+    this.bookToDeleteId = id;
+    const container = document.getElementById('container');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.style.display = 'none';
+    button.setAttribute('data-bs-toggle', 'modal');
+    if (mode === 'delete') {
+      button.setAttribute('data-bs-target', '#deleteModal');
+    }
+    container?.appendChild(button);
+    button.click();
+  };
 }

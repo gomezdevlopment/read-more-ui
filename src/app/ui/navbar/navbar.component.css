@@ -1,1 +1,8 @@
+.navbar {
+  padding-inline: 2rem;
+}
 
+.navbar-brand {
+  font-family: "Nilland";
+  font-size: 1.8em;
+}

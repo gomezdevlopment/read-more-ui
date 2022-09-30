@@ -1,10 +1,20 @@
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
-}
-
 .my-books-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
+}
+
+.my-header {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+h2 {
+  margin: 2rem;
+}
+
+.modal-dialog {
+  padding-top: 15%;
 }

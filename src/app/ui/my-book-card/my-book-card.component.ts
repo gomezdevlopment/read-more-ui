@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
+import { BookService } from 'src/app/services/book.service';
 
 @Component({
   selector: 'app-my-book-card',
@@ -8,7 +9,16 @@ import { Book } from 'src/app/models/book';
 })
 export class MyBookCardComponent implements OnInit {
   @Input() book?: Book;
-  constructor() {}
+  @Input() onOpenModal?: (string: string, id: number) => void;
+  public bookToDelete?: Book;
+  constructor(public service: BookService) {}
 
-  ngOnInit(): void {}
+  openModal(id?: number) {
+    if (this.onOpenModal != null && id != null) {
+      this.onOpenModal('delete', id);
+    }
+  }
+  ngOnInit(): void {
+    console.log('init');
+  }
 }

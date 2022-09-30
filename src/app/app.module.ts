@@ -13,7 +13,15 @@ import { NavbarComponent } from './ui/navbar/navbar.component';
 import { MyBookDetailsComponent } from './ui/my-book-details/my-book-details.component';
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, BookCardComponent, MyBooksComponent, MyBookCardComponent, NavbarComponent, MyBookDetailsComponent],
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    BookCardComponent,
+    MyBooksComponent,
+    MyBookCardComponent,
+    NavbarComponent,
+    MyBookDetailsComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
