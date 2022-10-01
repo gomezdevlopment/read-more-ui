@@ -34,4 +34,27 @@ export class MyBookDetailsComponent implements OnInit {
     this.bookId = Number(this.activatedRoute.snapshot.paramMap.get('bookId'));
     this.getBook(this.bookId);
   }
+
+  /**Star Rating*/
+  stars: number[] = [1, 2, 3, 4, 5];
+  selectedValue: number = 0;
+
+  countStar(star: number) {
+    this.selectedValue = star;
+  }
+
+  addClass(star: number) {
+    let ab = '';
+    for (let i = 0; i < star; i++) {
+      ab = 'starId' + i;
+      document.getElementById(ab)?.classList.add('selected');
+    }
+  }
+  removeClass(star: number) {
+    let ab = '';
+    for (let i = star - 1; i >= this.selectedValue; i--) {
+      ab = 'starId' + i;
+      document.getElementById(ab)?.classList.remove('selected');
+    }
+  }
 }

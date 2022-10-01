@@ -1,7 +1,45 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"
+/>
 <app-navbar></app-navbar>
 <div class="my-book-details-container">
   <div class="my-book-details-image-container">
     <img class="my-book-details-image" src="{{ book?.image }}" />
+    <div class="star-rating">
+      <div *ngFor="let star of stars; let i = index">
+        <li class="rating-list">
+          <i
+            (click)="countStar(star)"
+            id="{{ 'starId' + i }}"
+            class="fas fa-star"
+            [ngClass]="{ selected: star <= selectedValue }"
+            (mouseover)="addClass(star)"
+            (mouseout)="removeClass(star)"
+          ></i>
+        </li>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="col-sm-12">
+        <ul
+          class="list-inline rating-list"
+          *ngFor="let star of stars; let i = index"
+          style="display: inline-block"
+        >
+          <li
+            (click)="countStar(star)"
+            id="{{ 'starId' + i }}"
+            [ngClass]="{ selected: star <= selectedValue }"
+            (mouseover)="addClass(star)"
+            (mouseout)="removeClass(star)"
+          >
+            ★
+          </li>
+        </ul>
+      </div>
+    </div> -->
   </div>
   <div class="my-book-details-body">
     <h1>{{ book?.title }}</h1>
