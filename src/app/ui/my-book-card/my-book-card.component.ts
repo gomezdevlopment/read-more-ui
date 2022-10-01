@@ -18,6 +18,21 @@ export class MyBookCardComponent implements OnInit {
       this.onOpenModal('delete', id);
     }
   }
+
+  updateStatus(status: string) {
+    if (this.book != null) {
+      this.book.status = status;
+      this.service.updateBook(this.book).subscribe({
+        next: (res) => {
+          console.log('success' + res);
+        },
+        error: (err) => {
+          console.log('error');
+        },
+      });
+    }
+  }
+
   ngOnInit(): void {
     console.log('init');
   }

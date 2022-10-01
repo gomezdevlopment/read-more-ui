@@ -10,6 +10,7 @@ import { BookService } from 'src/app/services/book.service';
 })
 export class BookCardComponent implements OnInit {
   @Input() bookInfo?: BookInfo;
+  @Input() status?: string;
   constructor(public service: BookService) {}
   public book?: Book;
   public testUserId = 'testUserId';
@@ -41,5 +42,7 @@ export class BookCardComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.status);
+  }
 }

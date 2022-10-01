@@ -25,5 +25,8 @@
 </div>
 
 <div *ngFor="let bookInfo of searchResults" class="search-results">
-  <app-book-card [bookInfo]="bookInfo"></app-book-card>
+  <app-book-card
+    [bookInfo]="bookInfo"
+    [status]="isBookInList(bookInfo)"
+  ></app-book-card>
 </div>

@@ -50,11 +50,17 @@
   overflow: hidden;
 }
 
-.btn {
+.dropdown-toggle {
   background-color: #ffb74d;
   border-color: transparent;
 }
 
-.btn:hover {
+.dropdown-toggle:hover {
   border-color: transparent;
+  background-color: #d18f2d;
+}
+
+.dropdown-item:hover {
+  background-color: #ffb74d;
+  cursor: pointer;
 }

@@ -32,3 +32,18 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+.already.read {
+  background-color: #5bd16b;
+  border-color: transparent;
+}
+
+.currently.reading {
+  background-color: #ffb74d;
+  border-color: transparent;
+}
+
+.want.to.read {
+  background-color: cornflowerblue;
+  border-color: transparent;
+}

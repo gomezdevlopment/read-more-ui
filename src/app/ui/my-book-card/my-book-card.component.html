@@ -22,13 +22,19 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li>
-          <a class="dropdown-item">Already read</a>
+          <a class="dropdown-item" (click)="updateStatus('already read')"
+            >Already read</a
+          >
         </li>
         <li>
-          <a class="dropdown-item">Currently reading</a>
+          <a class="dropdown-item" (click)="updateStatus('currently reading')"
+            >Currently reading</a
+          >
         </li>
         <li>
-          <a class="dropdown-item">Want to read</a>
+          <a class="dropdown-item" (click)="updateStatus('want to read')"
+            >Want to read</a
+          >
         </li>
       </ul>
     </div>
