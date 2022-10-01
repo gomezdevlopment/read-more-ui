@@ -49,9 +49,18 @@ export class MyBookDetailsComponent implements OnInit {
       ab = 'starId' + i;
       document.getElementById(ab)?.classList.add('selected');
     }
+
+    for (let i = star; i < 5; i++) {
+      ab = 'starId' + i;
+      document.getElementById(ab)?.classList.remove('selected');
+    }
   }
   removeClass(star: number) {
     let ab = '';
+    for (let i = 0; i < this.selectedValue; i++) {
+      ab = 'starId' + i;
+      document.getElementById(ab)?.classList.add('selected');
+    }
     for (let i = star - 1; i >= this.selectedValue; i--) {
       ab = 'starId' + i;
       document.getElementById(ab)?.classList.remove('selected');

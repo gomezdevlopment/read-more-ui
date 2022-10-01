@@ -20,26 +20,6 @@
         </li>
       </div>
     </div>
-
-    <!-- <div class="row">
-      <div class="col-sm-12">
-        <ul
-          class="list-inline rating-list"
-          *ngFor="let star of stars; let i = index"
-          style="display: inline-block"
-        >
-          <li
-            (click)="countStar(star)"
-            id="{{ 'starId' + i }}"
-            [ngClass]="{ selected: star <= selectedValue }"
-            (mouseover)="addClass(star)"
-            (mouseout)="removeClass(star)"
-          >
-            ★
-          </li>
-        </ul>
-      </div>
-    </div> -->
   </div>
   <div class="my-book-details-body">
     <h1>{{ book?.title }}</h1>
