@@ -12,7 +12,7 @@
     <p class="max-lines">{{ book?.author }}</p>
     <div class="dropdown">
       <button
-        class="btn btn-secondary dropdown-toggle"
+        class="btn btn-secondary dropdown-toggle {{ book?.status }}"
         type="button"
         id="dropdownMenuButton1"
         data-bs-toggle="dropdown"
@@ -22,17 +22,23 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li>
-          <a class="dropdown-item" (click)="updateStatus('already read')"
+          <a
+            class="dropdown-item item-already-read"
+            (click)="updateStatus('already read')"
             >Already read</a
           >
         </li>
         <li>
-          <a class="dropdown-item" (click)="updateStatus('currently reading')"
+          <a
+            class="dropdown-item item-currently-reading"
+            (click)="updateStatus('currently reading')"
             >Currently reading</a
           >
         </li>
         <li>
-          <a class="dropdown-item" (click)="updateStatus('want to read')"
+          <a
+            class="dropdown-item item-want-to-read"
+            (click)="updateStatus('want to read')"
             >Want to read</a
           >
         </li>

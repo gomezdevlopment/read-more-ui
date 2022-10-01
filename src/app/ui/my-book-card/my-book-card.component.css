@@ -61,6 +61,32 @@
 }
 
 .dropdown-item:hover {
-  background-color: #ffb74d;
   cursor: pointer;
+}
+
+.item-already-read:hover {
+  background-color: #5bd16b;
+}
+
+.item-currently-reading:hover {
+  background-color: #ffb74d;
+}
+
+.item-want-to-read:hover {
+  background-color: cornflowerblue;
+}
+
+.already.read {
+  background-color: #5bd16b;
+  border-color: transparent;
+}
+
+.currently.reading {
+  background-color: #ffb74d;
+  border-color: transparent;
+}
+
+.want.to.read {
+  background-color: cornflowerblue;
+  border-color: transparent;
 }
