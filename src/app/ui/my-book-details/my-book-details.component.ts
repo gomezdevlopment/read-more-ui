@@ -22,9 +22,24 @@ export class MyBookDetailsComponent implements OnInit {
       this.service.getBookById(id).subscribe({
         next: (res) => {
           this.book = res;
+          this.selectedValue = this.book.rating;
         },
         error: (err) => {
           console.log(err);
+        },
+      });
+    }
+  }
+
+  updateRating() {
+    if (this.book != null) {
+      this.book.rating = this.selectedValue;
+      this.service.updateBook(this.book).subscribe({
+        next: (res) => {
+          console.log('success' + res);
+        },
+        error: (err) => {
+          console.log('error');
         },
       });
     }
@@ -37,10 +52,11 @@ export class MyBookDetailsComponent implements OnInit {
 
   /**Star Rating*/
   stars: number[] = [1, 2, 3, 4, 5];
-  selectedValue: number = 0;
+  selectedValue: number = this.book?.rating ?? 0;
 
   countStar(star: number) {
     this.selectedValue = star;
+    this.updateRating();
   }
 
   addClass(star: number) {

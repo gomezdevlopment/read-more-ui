@@ -14,6 +14,10 @@ export class BookService {
     return this.client.post<Book>(this.baseUrl + 'add', book);
   }
 
+  updateBook(book: Book): Observable<Book> {
+    return this.client.put<Book>(this.baseUrl + 'update', book);
+  }
+
   getBooks(userId: string): Observable<Book[]> {
     return this.client.get<Book[]>(this.baseUrl + 'all/' + userId);
   }
